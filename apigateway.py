@@ -7,7 +7,7 @@ app = fastapi.FastAPI()
 @app.get("/compute/{values}")
 def getComputeData(values: str):
     try:
-        url = f"http://compute-srv:2000/compute/{values}"
+        url = f"http://0.0.0.0:2000/compute/{values}"
         response = requests.get(url)
         
         if response.ok:
